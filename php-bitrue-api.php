@@ -103,7 +103,7 @@ class Bitrue {
 		$context = stream_context_create($opt);
 		$query = http_build_query($params, '', '&');
 		$ret = $this->http_get($this->base.$url.'?'.$query, $headers);
-    return $ret;
+                return $ret;
 	}
 	private function signedRequest($url, $params = [], $method = "GET") {
 		if ( empty($this->api_key) ) die("signedRequest error: API Key not set!");
